@@ -36,7 +36,8 @@
                  &kp NUBS  &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC &kp NUHS  &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            // Left encoder: Up/Down (change the focused slider/value). Right encoder: volume.
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -54,7 +55,8 @@
                             &trans            &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            // Left encoder: Right/Left (next/previous item). Right encoder: volume.
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
@@ -72,7 +74,8 @@
                  &trans &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            // Left encoder: Shift+Up/Down (coarser steps). Right encoder: volume.
+            sensor-bindings = <&inc_dec_kp LS(UP) LS(DOWN) &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
