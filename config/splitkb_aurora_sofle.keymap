@@ -64,15 +64,16 @@
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+// |       |PREV |PLAY |NEXT  |MUTE  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
 //               |     |      |      |      |        |  |       |      |       |       |      |
 // Thumb row: Raise + BSPC position = DEL
 // Left Ctrl and left Shift positions pass through (F1/F7 are on Lower), so Raise + Ctrl/Shift + arrows works
+// Media keys on the left home row: A = previous, S = play/pause, D = next, F = mute (F2-F5 stay on Lower)
             bindings = <
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
 &kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&trans    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
+&trans    &kp C_PREV &kp C_PP &kp C_NEXT &kp C_MUTE &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
 &trans    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp NUBS
                  &trans &trans  &trans  &trans    &trans   &trans    &trans      &kp DEL    &trans    &trans
             >;
