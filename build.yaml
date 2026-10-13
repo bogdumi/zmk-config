@@ -19,7 +19,9 @@
 #
 ---
 include:
+  # nice!view displays: the adapter must come before nice_view (see ZMK's nice_view_adapter README;
+  # it needs a wire from the controller's D1 pin to the nice!view CS pad)
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_left
+    shield: splitkb_aurora_sofle_left nice_view_adapter nice_view
   - board: nice_nano_v2
-    shield: splitkb_aurora_sofle_right
+    shield: splitkb_aurora_sofle_right nice_view_adapter nice_view
