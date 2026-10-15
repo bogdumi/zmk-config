@@ -23,3 +23,10 @@ include:
     shield: splitkb_aurora_sofle_left
   - board: nice_nano_v2
     shield: splitkb_aurora_sofle_right
+  # PandaKB Sofle (ProMicro nRF52840, which is a nice!nano v2 drop-in)
+  - board: nice_nano_v2
+    shield: sofle_left
+    artifact-name: pandakb_sofle_left
+  - board: nice_nano_v2
+    shield: sofle_right
+    artifact-name: pandakb_sofle_right
